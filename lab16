@@ -1,0 +1,51 @@
+Question 1 
+
+On fait un clone de busybox via la commande suivante : 
+
+git clone https://github.com/mirror/busybox.git 
+
+Question 2
+
+Pour lister les branches on utilise la commande --> git branch -a 
+
+Pour pointer à la version l_29_stable on applique la commande --> git checkout remotes/origin/l_29_stable .
+
+Question 3
+
+On vérifie ensuite que l'on se situe sur la bonne branche via la commande -->  git branch 
+
+Question 5
+
+On créé un fichier .config générique avec la commande --> make defconfig 
+
+Question 6
+
+On édite le fichier .config à l'aide de la commande --> make xconfig 
+
+Question 7
+
+Dans setting puis build option on sélectionne build static binary pour avoir un code qui s'exécute sans avoir besoin d'autres bibliothèques. 
+
+Question 8
+
+Au même endroit, on change ./_install vers ../nfsroot
+
+Question 9
+
+On enregistre et on quitte busybox ensuite 
+
+Question 10
+
+On lance alors make et make install, on a bien créé un nouveau répertoire nfsroot qui contient le rootfs busybox.
+
+Question 11
+
+Le fichier nfsroot contient les répertories suivants : 
+
+bin linuxrc sbin usr
+
+Ils correspondent à l'environnement. 
+
+Quesion 12
+
+ON créé les répertoires dev, proc, sys, etc et lib dans notre systèmes de fichiers racine se trouvant dans le nfsroot. 
